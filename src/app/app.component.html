@@ -1,0 +1,45 @@
+<nav class="n1">
+    <form [formGroup]="loginform" (ngSubmit)="Submit()">
+        <h1 class="h1"> Register Here</h1><br>  
+        <div class="D1">
+            <input type="text" placeholder=" Enter the First name" name="FirstName" formControlName="Firstname">
+            <br>
+            <span appStyle *ngIf="Firstname && Firstname.invalid && Firstname.touched">*Firstname is Reqiured upto 50 Character</span>
+        </div><br>
+        <div>
+            <input type="text" placeholder=" Enter the Last name" name="Lastname" formControlName="Lastname">
+            <br>
+            <span appStyle *ngIf="Lastname && Lastname.invalid && Lastname.touched">*Lastname is Reqiured upto 50 Character</span>
+        </div><br>
+        <div>
+            <input type="text" placeholder=" Enter the Email Address" name="EmailAddress" formControlName="EmailAddress">
+            <br>
+            <span appStyle *ngIf="EmailAddress && EmailAddress.invalid && EmailAddress.touched">*Email Adderss is Reqiured upto 254 Character</span>
+        </div><br>
+       <div>
+        <input type="text" placeholder="Enter the Phone number" name="Phonenumber" formControlName="Phonenumber">
+        <br>
+        <span appStyle *ngIf="Phonenumber && Phonenumber.invalid && Phonenumber.touched">*Phone number is Reqiured upto 10 Character</span>
+       </div><br>
+    <div>
+        <input type="text" placeholder="Enter the Organization Name" name="OrganizationName" formControlName="OrganizationName">
+        <br>
+        <span appStyle *ngIf="OrganizationName && OrganizationName.invalid && OrganizationName.touched">*OrganizationName is Reqiured upto 1000 Character</span>
+    </div><br>
+    <div>
+        <input type="text" placeholder="Enter the Organization Address" name="OrganizationAddress" formControlName="OrganizationAddress">
+        <br>
+        <span appStyle *ngIf="OrganizationAddress && OrganizationAddress.invalid && OrganizationAddress.touched">*Organization Address is Reqiured upto 1000 Character</span>
+    </div><br>
+    <div>
+        <input type="date">
+    </div>
+    <br>
+        <div>
+            <input type="password" placeholder="Enter the password" name="password" formControlName="password">
+            <span appStyle *ngIf="password && password.invalid && password.touched">*Organization Address is Reqiured upto 16 Character</span>
+        </div>
+        <br>
+        <button class="B1" >submit</button><button class="B2" (click)="set()">Reset</button>
+    </form>
+</nav>
